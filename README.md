@@ -27,6 +27,15 @@ API Docs  -->   Swagger / OpenAPI
 	 make up       
 ------------------
 
+⚙️ **Makefile Commands**
+
+		make build      # Build all containers
+		make up         # Start backend, frontend, and MongoDB
+		make down       # Stop all services
+		make test       # Run both frontend and backend tests
+		make lint       # Run ESLint + Flake8
+
+------------------
 **Access the app:**
 
  **Frontend**: http://localhost:3000
