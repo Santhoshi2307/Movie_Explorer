@@ -5,36 +5,35 @@ A full-stack web application for browsing, filtering, and viewing movies, actors
 ------------------
 🛠 **Tech Stack**
 
-Layer        Technology
+Frontend  -->   React (Vite), Bootstrap
 
-Frontend     React (Vite), Bootstrap
+Backend   -->   Python Flask (REST API)
 
-Backend      Python Flask (REST API)
+Database  -->   MongoDB
 
-Database     MongoDB
-
-API Docs     Swagger / OpenAPI
+API Docs  -->   Swagger / OpenAPI
 
 ------------------
  🚀**Getting Started**
 
 1. Clone the Repository
 
- git clone https://github.com/yourusername/movie-explorer.git
- cd movie-explorer
+	 git clone https://github.com/yourusername/movie-explorer.git
+	 cd movie_explorer
 
 2. Run with Docker (Recommended)
 
- make build    # Build both frontend & backend containers
- make up       # Start services (frontend, backend, mongo)
+	 make build    
+	 make up       
+------------------
 
-Access the app:
+**Access the app:**
 
- Frontend: http://localhost:3000
+ **Frontend**: http://localhost:3000
  
- Backend API: http://localhost:5000
+ **Backend API**: http://localhost:5000
  
- Swagger Docs: http://localhost:5000/apidocs
+ **Swagger Docs**: http://localhost:5000/apidocs
 
 🧪 **Testing**
 
@@ -44,7 +43,7 @@ Access the app:
 
  Frontend Tests
 
-  cd frontend
+  cd movie_explorer_frontend
   npm test
 
 🧹 **Linting**
@@ -54,17 +53,12 @@ Access the app:
 
 🔧 **Features**
 
- 🔍 Filter movies by actor, director, genre (backend-based filtering)
+ 🔍 Filter movies by actor, director, genre 
  
  📜 View full profiles of movies, actors, and directors
  
  🧾 Auto-documented REST API with Swagger
 
-
-
-✅ **Requirements**
-
- Node.js & Python (for local dev without containers)
 
 
 ✍️ **API Documentation**
