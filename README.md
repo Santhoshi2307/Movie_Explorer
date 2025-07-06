@@ -52,7 +52,7 @@ API Docs  -->   Swagger / OpenAPI
 
  Frontend Tests
 
-  cd movie_explorer_frontend
+  cd frontend
   npm test
 
 🧹 **Linting**
