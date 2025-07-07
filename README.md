@@ -67,6 +67,9 @@ Frontend Tests
 
  make lint
 
+** DATABASE DUMP **
+
+	movies_explorer.zip
 
 🔧 **Features**
 
