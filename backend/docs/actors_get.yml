@@ -1,0 +1,40 @@
+tags:
+  - Actors
+summary: Get all actors filtered by actor-name, movie or genre
+parameters:
+  - name: name
+    in: query
+    type: string
+    description: Filter actors by actor name
+  - name: movie
+    in: query
+    type: string
+    description: Filter actors by movie title
+  - name: genre
+    in: query
+    type: string
+    description: Filter actors by genre name
+responses:
+  200:
+    description: A list of filtered actors
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          birth_year:
+            type: integer
+          country:
+            type: string
+          movies:
+            type: array
+            items:
+              type: string
+          genres:
+            type: array
+            items:
+              type: string
+  404:
+    description: No actors found matching the filters

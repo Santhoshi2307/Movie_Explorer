@@ -1,0 +1,4 @@
+Flask==2.3.3
+Flask-PyMongo==2.3.0
+Flasgger==0.9.7.1
+marshmallow==3.21.1

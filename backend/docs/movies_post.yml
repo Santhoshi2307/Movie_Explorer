@@ -1,0 +1,66 @@
+tags:
+  - Movies
+summary: Add a new movie
+description: Create a new movie by looking up actors, director, and genres by name
+consumes:
+  - application/json
+produces:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: Movie data (names instead of IDs)
+    schema:
+      type: object
+      required:
+        - title
+        - release_year
+        - director
+        - actors
+        - genres
+      properties:
+        title:
+          type: string
+          example: Inception
+        release_year:
+          type: integer
+          example: 2010
+        director:
+          type: string
+          example: Christopher Nolan
+        actors:
+          type: array
+          items:
+            type: string
+          example: ["Leonardo DiCaprio", "Tom Hardy"]
+        genres:
+          type: array
+          items:
+            type: string
+          example: ["Sci-Fi", "Thriller"]
+responses:
+  201:
+    description: Movie created successfully
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+        id:
+          type: string
+  400:
+    description: Invalid input or entities not found
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+
+  409:
+    description: Movie already exists
+    schema:
+      type: object
+      properties:
+        message:
+          type: string

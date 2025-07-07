@@ -1,0 +1,32 @@
+tags:
+  - Directors
+summary: Get Director by name
+parameters:
+  - name: name
+    in: query
+    type: string
+    description: Filter directors by director name
+responses:
+  200:
+    description: Director
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          birth_year:
+            type: integer
+          country:
+            type: string
+          movies:
+            type: array
+            items:
+              type: string
+          genres:
+            type: array
+            items:
+              type: string
+  404:
+    description: No directors found matching the filters

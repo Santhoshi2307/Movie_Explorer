@@ -1,0 +1,27 @@
+tags:
+  - Directors
+summary: Update a director's details by name
+consumes:
+  - application/json
+parameters:
+  - in: path
+    name: name
+    required: true
+    type: string
+    description: Name of the director to update
+  - in: body
+    name: director
+    required: true
+    description: Updated director data
+    schema:
+      type: object
+      properties:
+        birth_year:
+          type: integer
+        country:
+          type: string
+responses:
+  200:
+    description: Director updated successfully
+  404:
+    description: Director not found

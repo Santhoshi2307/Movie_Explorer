@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  title: "Movie API"
+  version: "1.0.0"
+
+definitions:
+  Movie:
+    type: object
+    properties:
+      _id:
+        type: string
+      title:
+        type: string
+      release_year:
+        type: integer
+      director_id:
+        type: string
+      actor_ids:
+        type: array
+        items:
+          type: string
+      genre_ids:
+        type: array
+        items:
+          type: string
+
+  Actor:
+    type: object
+    properties:
+      _id:
+        type: string
+      name:
+        type: string
+      birth_year:
+        type: integer
+      country:
+        type: string
+
+  Director:
+    type: object
+    properties:
+      _id:
+        type: string
+      name:
+        type: string
+      birth_year:
+        type: integer
+      country:
+        type: string

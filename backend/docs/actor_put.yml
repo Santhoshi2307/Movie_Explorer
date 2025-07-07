@@ -1,0 +1,27 @@
+tags:
+  - Actors
+summary: Update an actor's details by name
+consumes:
+  - application/json
+parameters:
+  - in: path
+    name: name
+    required: true
+    type: string
+    description: Name of the actor to update
+  - in: body
+    name: actor
+    required: true
+    description: Updated actor data
+    schema:
+      type: object
+      properties:
+        birth_year:
+          type: integer
+        country:
+          type: string
+responses:
+  200:
+    description: Actor updated successfully
+  404:
+    description: Actor not found
