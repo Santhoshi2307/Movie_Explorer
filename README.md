@@ -24,7 +24,8 @@ API Docs  -->   Swagger / OpenAPI
 2. Run with Docker (Recommended)
 
 	 make build    
-	 make up       
+	 make up
+	        
 ------------------
 
 ⚙️ **Makefile Commands**
@@ -46,13 +47,20 @@ API Docs  -->   Swagger / OpenAPI
 
 🧪 **Testing**
 
- Backend Tests
+ Run All Tests
 
   make test
 
- Frontend Tests
+Backend Tests
+
+  cd backend
+  pytest
+ 
+ 
+Frontend Tests
 
   cd frontend
+  npm install
   npm test
 
 🧹 **Linting**
